@@ -21,7 +21,7 @@ interface NamespaceMatch
      *
      * @param string $id The identification of the match builder
      *
-     * @return Match
+     * @return ParametersMatch
      */
     public function lookupId($id);
 
@@ -31,7 +31,7 @@ interface NamespaceMatch
      * has been invoked.
      *
      * @param string $id      The identification of the match builder
-     * @param Match  $builder The builder which is being registered
+     * @param ParametersMatch  $builder The builder which is being registered
      */
-    public function registerId($id, Match $builder);
+    public function registerId($id, ParametersMatch $builder);
 }

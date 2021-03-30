@@ -12,8 +12,8 @@ namespace PHPUnit\Framework\MockObject;
 use Exception;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\MockObject\Builder\InvocationMocker as BuilderInvocationMocker;
-use PHPUnit\Framework\MockObject\Builder\Match;
 use PHPUnit\Framework\MockObject\Builder\NamespaceMatch;
+use PHPUnit\Framework\MockObject\Builder\ParametersMatch;
 use PHPUnit\Framework\MockObject\Matcher\DeferredError;
 use PHPUnit\Framework\MockObject\Matcher\Invocation as MatcherInvocation;
 use PHPUnit\Framework\MockObject\Stub\MatcherCollection;
@@ -82,7 +82,7 @@ class InvocationMocker implements Invokable, MatcherCollection, NamespaceMatch
     /**
      * @throws RuntimeException
      */
-    public function registerId($id, Match $builder): void
+    public function registerId($id, ParametersMatch $builder): void
     {
         if (isset($this->builderMap[$id])) {
             throw new RuntimeException(

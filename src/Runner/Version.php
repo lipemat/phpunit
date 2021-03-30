@@ -30,7 +30,7 @@ class Version
         }
 
         if (self::$version === null) {
-            $version       = new VersionId('7.5.20', \dirname(__DIR__, 2));
+            $version       = new VersionId('7.5.20.1', \dirname(__DIR__, 2));
             self::$version = $version->getVersion();
         }
 
@@ -50,7 +50,7 @@ class Version
 
     public static function getVersionString(): string
     {
-        return 'PHPUnit ' . self::id() . ' by Sebastian Bergmann and contributors.';
+        return 'PHPUnit ' . self::id() . ' by Mat Lipe and contributors.';
     }
 
     public static function getReleaseChannel(): string
