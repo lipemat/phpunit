@@ -305,7 +305,7 @@ final class MockMethod
                     $typeDeclaration = $parameter->getType()->getName() . ' ';
                 } else {
                     try {
-                        $class = $parameter->getClass();
+                        $class = $parameter->getType();
                     } catch (ReflectionException $e) {
                         throw new RuntimeException(
                             \sprintf(
